@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 
 function Footer() {
   const [visits, setVisits] = useState(0);
@@ -76,8 +78,15 @@ function Footer() {
             <div>
               <h2 className="font-semibold mb-5 text-gray-900">Get in Touch</h2>
               <div className="text-sm space-y-2">
-                <p>+1-212-456-7890</p>
-                <p>ladecor@gmail.com</p>
+                <FaPhoneAlt size={24} /><p>+917906696289</p>
+                <FaEnvelope size={24} /><p>ladecorinteriordesignstudio@gmail.com</p>
+                <FaMapMarkerAlt size={24} /><p>Shop No 1 & 2 Upper Ground Floor Nr Kr </p>
+                <p>Garden Bypass Road Opposite Owais Karni</p>
+                <p>Masjid Dhorra Aligarh Uttar Pradesh 202001</p>
+                {/* <p>Shop No 1 & 2 Upper Ground Floor
+                    Nr Kr Garden Bypass Road Opposite Owais Karni 
+                    Masjid Dhorra Aligarh Uttar Pradesh 202001</p> */}
+
               </div>
             </div>
           </div>

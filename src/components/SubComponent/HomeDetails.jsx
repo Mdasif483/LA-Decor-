@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import HeroSection from "./SubComponent/HeroSection";
-import ServicesSection from "./SubComponent/ServicesSection";
-import WhyChooseUs from "./SubComponent/WhyChooseUs";
-import CallToAction from "./SubComponent/CallToAction";
 
 const links = [
-  // { name: "HOME", href: "/" },
-  // { name: "About", href: "/about" },
-  // { name: "Services", href: "/Services" },
-  // { name: "Certificate", href: "/Certificate" },
-  // { name: "Gallery", href: "/Gallery" },
-  // { name: "contact", href: "/contact" },
+  { name: "HOME", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/Services" },
+  { name: "Certificate", href: "/Certificate" },
+  { name: "Gallery", href: "/Gallery" },
+  { name: "contact", href: "/contact" },
 ];
 
 const stats = [
@@ -45,12 +42,10 @@ function useCounter(target, duration = 2000) {
   return count;
 }
 
-function Home() {
+function HomeDetails() {
   return (
     <div>
-
-      <HeroSection />
-     
+      {/* <HeroSection /> */}
       
       <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mt-2">
         <img
@@ -139,13 +134,9 @@ function Home() {
           </motion.div>
         </div>
       </div>
-       
-      <ServicesSection/>
-      <WhyChooseUs/>
-      <CallToAction/>
     </div>
   );
 }
 
 
-export default Home;
+export default HomeDetails;
