@@ -8,7 +8,8 @@ import Home from './components/Home'
 import Services from './components/Services'
 import Certificate from './components/Certificate'
 import Navbar from './components/Navbar'
-import Logo from "./components/logo";
+// import Logo from "./components/logo";
+import ServiceDetail from "./components/ServiceDetail";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:id" element={<ServiceDetail />} />
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />

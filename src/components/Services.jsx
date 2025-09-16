@@ -1,37 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Services() {
   const services = [
     {
       title: "Premium Wallpapers",
       desc: "Stylish wallpaper rolls & customized designs to redefine your interiors with elegance and modern touch.",
-      img: "/images/WhatsApp Image 2025-09-15 at 13.46.06_67863f06.jpg",
+      img: "/images/pexels-heyho-7546771.jpg",
     },
     {
       title: "PVC Wall Paneling",
       desc: "Durable, elegant, and easy-to-maintain PVC wall paneling that enhances both beauty and utility.",
-      img: "/images/WhatsApp Image 2025-09-15 at 13.46.06_dd0edc13.jpg",
+      img: "/images/pexels-heyho-7166941.jpg",
     },
     {
       title: "False Ceilings",
       desc: "Transform spaces with stylish false ceilings designed for a premium and spacious look.",
-      img: "/images/WhatsApp Image 2025-09-15 at 13.46.07_db2199ec.jpg",
+      img: "/images/pexels-heyho-6758773.jpg",
     },
     {
       title: "Modular Kitchens",
       desc: "Smart modular kitchens blending creativity and functionality to make cooking a delightful experience.",
-      img: "/images/WhatsApp Image 2025-09-15 at 13.46.08_d2fc1c71.jpg",
+      img: "/images/pexels-orlovamaria-4906250.jpg",
     },
     {
       title: "Decorative Blinds",
-      desc: "Wide range of blinds – roller, zebra, wooden, vertical – crafted for elegance and privacy.",
-      img: "/images/WhatsApp Image 2025-09-15 at 13.46.08_d31bff9a.jpg",
+      desc: "Wide range of blinds  roller, zebra, wooden, vertical  crafted for elegance and privacy.",
+      img: "/images/pexels-curtis-adams-1694007-10827347.jpg",
     },
     {
       title: "Artificial Garden & UV Sheets",
       desc: "Beautiful artificial garden grass and UV sheets to add freshness and creativity to your interiors.",
-      img: "/images/WhatsApp Image 2025-09-15 at 13.46.07_db2199ec.jpg",
+      img: "/images/pexels-secret-garden-333350-2879821.jpg",
     },
   ];
 
@@ -56,12 +57,13 @@ function Services() {
       {/* Services Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
+          <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}>
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+            className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
           >
             <img
               src={service.img}
@@ -75,6 +77,7 @@ function Services() {
               <p className="text-sm text-gray-200 mt-2">{service.desc}</p>
             </div>
           </motion.div>
+          </Link>
         ))}
       </div>
     </div>

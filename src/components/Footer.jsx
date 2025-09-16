@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-// import {
-//   FaFacebookF,
-//   FaInstagram,
-//   FaLinkedinIn,
-//   FaTwitter,
-// } from "react-icons/fa";
 
 function Footer() {
+  const [visits, setVisits] = useState(0);
+
+  useEffect(() => {
+    // LocalStorage se value get karo
+    let count = localStorage.getItem("laDecorVisits");
+    if (!count) {
+      count = 1;
+    } else {
+      count = parseInt(count) +1;
+    }
+    localStorage.setItem("laDecorVisits", count);
+    setVisits(count);
+  }, []);
+
   return (
     <div className="w-full bg-gray-100">
       <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-12 w-full text-gray-600">
@@ -27,9 +35,7 @@ function Footer() {
                 alt="LA Decor Logo"
                 className="h-14 w-14 rounded-full"
               />
-              <h1 className="ml-3 text-2xl font-bold text-gray-900">
-                LA DECOR
-              </h1>
+              <h1 className="ml-3 text-2xl font-bold text-gray-900">LA DECOR</h1>
             </div>
             <p className="mt-6 text-sm leading-relaxed">
               LA Decor Interior Design Studio brings elegance and innovation to
@@ -72,29 +78,25 @@ function Footer() {
               <div className="text-sm space-y-2">
                 <p>+1-212-456-7890</p>
                 <p>ladecor@gmail.com</p>
-                {/* Social Icons */}
-                {/* <div className="flex gap-4 mt-4">
-                  {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
-                    (Icon, idx) => (
-                      <motion.a
-                        key={idx}
-                        href="#"
-                        className="w-9 h-9 flex items-center justify-center bg-gray-200 rounded-full hover:bg-yellow-500 hover:text-white transition"
-                        whileHover={{ scale: 1.1 }}
-                      >
-                        <Icon size={16} />
-                      </motion.a>
-                    )
-                  )}
-                </div> */}
               </div>
             </div>
           </div>
         </motion.div>
 
+        {/* Visitor Counter */}
+        <motion.p
+          className="pt-6 text-center text-sm font-medium text-gray-700"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          👀 Visitors Count: <span className="text-yellow-600">{visits}</span>
+        </motion.p>
+
         {/* Bottom Section */}
         <motion.p
-          className="pt-6 text-center text-xs md:text-sm pb-6 text-gray-500"
+          className="pt-4 text-center text-xs md:text-sm pb-6 text-gray-500"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
