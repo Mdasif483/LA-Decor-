@@ -88,7 +88,8 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
-        &copy; {new Date().getFullYear()} QuickProvide Pest Control Service. All rights reserved.
+        &copy; {new Date().getFullYear()} 
+         LA Decor. All rights reserved.
       </div>
     </footer>
   );
