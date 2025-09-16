@@ -37,7 +37,7 @@ function Services() {
   ];
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white mt-5 py-14 px-6 md:px-12 lg:px-20">
+    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white mt-27 py-14 px-6 md:px-12 lg:px-20">
       {/* Section Title */}
       <div className="text-center mb-12">
         <motion.h1

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import HeroSection from "./SubComponent/HeroSection";
-import ServicesSection from "./SubComponent/ServicesSection";
-import WhyChooseUs from "./SubComponent/WhyChooseUs";
-import CallToAction from "./SubComponent/CallToAction";
+
 
 const links = [
   // { name: "HOME", href: "/" },
@@ -49,9 +46,6 @@ function Home() {
   return (
     <div>
 
-      <HeroSection />
-     
-      
       <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mt-2">
         <img
           alt=""
@@ -139,10 +133,6 @@ function Home() {
           </motion.div>
         </div>
       </div>
-       
-      <ServicesSection/>
-      <WhyChooseUs/>
-      <CallToAction/>
     </div>
   );
 }

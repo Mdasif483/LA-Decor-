@@ -1,122 +1,92 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import Translator from "./Translator";
 
+export default function Footer() {
+    const [visits, setVisits] = useState(0);
+    const [showTranslator, setShowTranslator] = useState(false);
+    const hasIncremented = useRef(false); // ✅ FIX: Declare useRef
 
-function Footer() {
-  const [visits, setVisits] = useState(0);
+    useEffect(() => {
+        if (hasIncremented.current) return; // Exit if already incremented
+        hasIncremented.current = true;
 
-  useEffect(() => {
-    // LocalStorage se value get karo
-    let count = localStorage.getItem("laDecorVisits");
-    if (!count) {
-      count = 1;
-    } else {
-      count = parseInt(count) +1;
-    }
-    localStorage.setItem("laDecorVisits", count);
-    setVisits(count);
-  }, []);
+        let totalVisits = parseInt(localStorage.getItem("total_visits") || "0");
+        totalVisits += 1;
+        localStorage.setItem("total_visits", totalVisits);
+        setVisits(totalVisits);
+    }, []);
 
-  return (
-    <div className="w-full bg-gray-100">
-      <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-12 w-full text-gray-600">
-        {/* Top Section */}
-        <motion.div
-          className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-400/30 pb-10"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          {/* Logo + Description */}
-          <div className="md:max-w-md">
-            <div className="flex items-center">
-              <img
-                src="/images/WhatsApp Image 2025-09-15 at 13.46.04_1287a868.jpg"
-                alt="LA Decor Logo"
-                className="h-14 w-14 rounded-full"
-              />
-              <h1 className="ml-3 text-2xl font-bold text-gray-900">LA DECOR</h1>
+    return (
+        <footer className="bg-[#0F0F0F] text-white py-12">
+            <div className="container mx-auto grid md:grid-cols-4 gap-8">
+
+                {/* About */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">About</h3>
+                    <p className="text-gray-400">
+                        At La Décor, we believe every space tells a story. Our passion lies in crafting interiors that blend elegance, comfort, and functionality. From custom furniture to innovative designs, we aim to transform houses into homes filled with warmth, beauty, and timeless charm.
+                    </p>
+                </div>
+
+                {/* Quick Links */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li><Link to="/" className="hover:text-indigo-400">Home</Link></li>
+                        <li><Link to="/about" className="hover:text-indigo-400">About</Link></li>
+                        <li><Link to="/services" className="hover:text-indigo-400">Services</Link></li>
+                        <li><Link to="/gallery" className="hover:text-indigo-400">Gallery</Link></li>
+                        <li><Link to="/certificate" className="hover:text-indigo-400">Certificates</Link></li>
+                        <li><Link to="/contact" className="hover:text-indigo-400">Contact</Link></li>
+                    </ul>
+                </div>
+
+                {/* Services */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">Services</h3>
+                    <ul className="flex flex-col gap-2 text-gray-400">
+                        <li>Pre & Post Construction Anti Termite Treatment</li>
+                        <li>Termite Treatment</li>
+                        <li>Bedbug Control</li>
+                        <li>Cockroach Control</li>
+                        <li>Herbal & Gel Treatment</li>
+                        <li>Rat Control</li>
+                        <li>Water Tank Cleaning</li>
+                    </ul>
+                </div>
+
+                {/* Contact + Visitor Counter + Translator */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+                    <p className="text-gray-400">
+                       Shop No 1 & 2 Upper Ground Floor  Nr Kr Garden Bypass Road Opposite Owais Karni Masjid Dhorra Aligarh Uttar Pradesh 202001,India
+                    </p>
+                    <p className="text-gray-400 mt-2">Phone: +917906696289</p>
+                    <p className="text-gray-400">Email: ladecorinteriordesignstudio@gmail.com </p>
+
+                    {/* Visit Counter (per page load) */}
+                    <p className="text-gray-400 mt-4 text-sm">
+                        🔁 Total Page Visits: <span className="font-semibold">{visits}</span>
+                    </p>
+
+                    {/* Translator Button */}
+                    <div className="mt-6">
+                        <button
+                            onClick={() => setShowTranslator(!showTranslator)}
+                            className="bg-[#000205] hover:bg-[#000e22] text-white px-4 py-2 rounded-lg"
+                        >
+                            🌍 Translate Website
+                        </button>
+                        {showTranslator && <Translator />}
+                    </div>
+                </div>
+
             </div>
-            <p className="mt-6 text-sm leading-relaxed">
-              LA Decor Interior Design Studio brings elegance and innovation to
-              every space. From wallpapers to modular kitchens and false
-              ceilings, our expert craftsmanship and creative designs transform
-              spaces into stylish, comfortable, and functional environments that
-              inspire.
-            </p>
-          </div>
 
-          {/* Links + Contact */}
-          <div className="flex-1 flex flex-wrap md:justify-end gap-16">
-            {/* Company Links */}
-            <div>
-              <h2 className="font-semibold mb-5 text-gray-900">Company</h2>
-              <ul className="text-sm space-y-2">
-                {[
-                  { name: "Home", href: "/" },
-                  { name: "About Us", href: "/about" },
-                  { name: "Services", href: "/Services" },
-                  { name: "Certificate", href: "/certificate" },
-                  { name: "Gallery", href: "/Gallery" },
-                  { name: "Contact Us", href: "/contact" },
-                  { name: "Privacy Policy", href: "#" },
-                ].map((link, idx) => (
-                  <motion.li
-                    key={idx}
-                    whileHover={{ x: 5, color: "#facc15" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <a href={link.href}>{link.name}</a>
-                  </motion.li>
-                ))}
-              </ul>
+            <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                &copy; {new Date().getFullYear()} QuickProvide Pest Control Service. All rights reserved.
             </div>
-
-            {/* Contact */}
-            <div>
-              <h2 className="font-semibold mb-5 text-gray-900">Get in Touch</h2>
-              <div className="text-sm space-y-2">
-                <FaPhoneAlt size={24} /><p>+917906696289</p>
-                <FaEnvelope size={24} /><p>ladecorinteriordesignstudio@gmail.com</p>
-                <FaMapMarkerAlt size={24} /><p>Shop No 1 & 2 Upper Ground Floor Nr Kr </p>
-                <p>Garden Bypass Road Opposite Owais Karni</p>
-                <p>Masjid Dhorra Aligarh Uttar Pradesh 202001</p>
-                {/* <p>Shop No 1 & 2 Upper Ground Floor
-                    Nr Kr Garden Bypass Road Opposite Owais Karni 
-                    Masjid Dhorra Aligarh Uttar Pradesh 202001</p> */}
-
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Visitor Counter */}
-        <motion.p
-          className="pt-6 text-center text-sm font-medium text-gray-700"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
-          👀 Visitors Count: <span className="text-yellow-600">{visits}</span>
-        </motion.p>
-
-        {/* Bottom Section */}
-        <motion.p
-          className="pt-4 text-center text-xs md:text-sm pb-6 text-gray-500"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          © {new Date().getFullYear()} LA Decor. All Rights Reserved. Designed
-          with ❤️ by .
-        </motion.p>
-      </footer>
-    </div>
-  );
+        </footer>
+    );
 }
-
-export default Footer;

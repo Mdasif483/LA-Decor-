@@ -18,7 +18,7 @@ const images = [
 
 function Gallery() {
   return (
-    <div className="bg-gray-50 py-20">
+    <div className="bg-gray-50 py-20 mt-27">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Heading */}
         <motion.h2

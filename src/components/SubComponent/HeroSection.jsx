@@ -34,7 +34,7 @@ function HeroSection() {
   }, [index]);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen mt-27">
       {/* Background Carousel */}
       <Carousel
         autoPlay
@@ -46,14 +46,14 @@ function HeroSection() {
       >
         <div>
           <img
-            src="/images/pexels-heyho-7535027.jpg"
+            src="/images/pexels-falling4utah-2724749.jpg"
             alt="Interior 1"
             className="h-screen w-full object-cover"
           />
         </div>
         <div>
           <img
-            src="/images/pexels-heyho-7546219.jpg"
+            src="/images/pexels-fotoaibe-1571472.jpg"
             alt="Interior 2"
             className="h-screen w-full object-cover"
           />
@@ -90,12 +90,22 @@ function HeroSection() {
             Redefining Spaces, Redefining Elegance
           </motion.p>
 
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            className="mt-6 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg"
-          >
-            <Link to="/gallery">Explore Our Collection</Link>
-          </motion.button>
+          {/* Buttons */}
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg"
+            >
+              <Link to="/gallery">Explore Our Collection</Link>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              className="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg"
+            >
+              <Link to="/contact">Contact Us</Link>
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </div>

@@ -14,7 +14,7 @@ function Certificate() {
     },
   ];
   return (
-    <div className='mt-5'>
+    <div className='mt-27'>
      <div className="bg-gray-50 py-16 px-6 lg:px-20">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-12">

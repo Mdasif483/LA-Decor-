@@ -6,7 +6,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 z-50">
+    <nav className="w-full bg-[#F9FAFB] shadow-md fixed top-0 z-50 mt-9">
       <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 xl:px-32 flex justify-between items-center h-[70px]">
         {/* Logo */}
         <div className="flex items-center">
@@ -14,7 +14,7 @@ function Navbar() {
     <img
       src={logo}
       alt="LA Decor"
-      className="h-12 w-12 rounded-full object-cover relative z-10"
+      className="h-15 w-15 rounded-full object-cover relative z-10"
     />
     {/* Hover background */}
     <span className="absolute inset-0 rounded-full bg-yellow-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 z-0"></span>
