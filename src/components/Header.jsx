@@ -16,7 +16,7 @@ function Header() {
           scrollamount="5"
           className="font-medium"
         >
-          ✨  Registration Number : 09CBPPD8563B1ZH , UDYAM REGISTRATION NUMBER :  UDYAM-UP-02-0063416, Contact Number : +917906696289✨
+          ✨  Registration Number : 09CBPPD8563B1ZH , UDYAM REGISTRATION NUMBER :  UDYAM-UP-02-0063416, Phone:+91 7906696289 , 9084549327✨
         </marquee>
       </div>
     </div>
