@@ -97,9 +97,8 @@ function Navbar() {
 
       {/* Mobile Side Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-70 flex flex-col ${
-          isOpen ? "translate-x-0 " : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-70 flex flex-col ${isOpen ? "translate-x-0 " : "translate-x-full"
+          }`}
       >
         {/* Header with title and close button */}
         <div className="flex justify-between items-center px-6 py-4 border-b bg-[#0F0F0F]">
@@ -113,7 +112,7 @@ function Navbar() {
         </div>
 
         {/* Menu links */}
-        <ul className="flex flex-col items-start px-6 py-6 space-y-6  text-gray-700 font-medium flex-grow">
+        <ul className="flex flex-col items-start px-6 py-6 space-y-6 text-gray-700 font-medium flex-grow overflow-y-auto">
           <li>
             <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               Home
@@ -146,7 +145,7 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Footer with social media icons */}
+        {/* Footer with social media icons - always sticky at bottom */}
         <div className="flex justify-around px-6 py-4 border-t text-white text-xl bg-[#0F0F0F]">
           <a href="https://facebook.com" target="_blank" rel="noreferrer">
             <FaFacebookF className="hover:text-blue-500 transition" />
@@ -162,6 +161,7 @@ function Navbar() {
           </a>
         </div>
       </div>
+
     </nav>
   );
 }

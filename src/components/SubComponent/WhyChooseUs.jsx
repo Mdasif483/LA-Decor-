@@ -31,54 +31,58 @@ const features = [
 
 function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white" id="why-choose-us">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Section Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-4xl font-bold text-center text-gray-800 mb-14"
+    <section
+  className="py-20 bg-white overflow-x-hidden" // 👈 added overflow-x-hidden
+  id="why-choose-us"
+>
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    {/* Section Heading */}
+    <motion.h2
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="text-4xl font-bold text-center text-gray-800 mb-14"
+    >
+      Why <span className="text-yellow-500">Choose Us?</span>
+    </motion.h2>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+      {features.map((feature, index) => (
+        <motion.div
+          key={feature.title}
+          className="flex flex-col md:flex-row items-center gap-6 bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300"
+          initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: index * 0.2, duration: 0.8 }}
         >
-          Why <span className="text-yellow-500">Choose Us?</span>
-        </motion.h2>
+          {/* Image */}
+          <div className="w-full md:w-1/3">
+            <img
+              src={feature.img}
+              alt={feature.title}
+              className="rounded-xl object-cover w-full h-40"
+            />
+          </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              className="flex flex-col md:flex-row items-center gap-6 bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-            >
-              {/* Image */}
-              <div className="w-full md:w-1/3">
-                <img
-                  src={feature.img}
-                  alt={feature.title}
-                  className="rounded-xl object-cover w-full h-40"
-                />
-              </div>
+          {/* Content */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="flex justify-center md:justify-start mb-3">
+              {feature.icon}
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {feature.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {feature.desc}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
-              {/* Content */}
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex justify-center md:justify-start mb-3">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 
