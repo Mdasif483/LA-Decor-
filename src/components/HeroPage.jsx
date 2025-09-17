@@ -9,7 +9,7 @@ import ContactPopup from './SubComponent/ContactPopup';
 
 function HeroPage() {
   return (
-    <div>
+    <div >
       
       <ContactPopup/>
       <FloatingContact/>

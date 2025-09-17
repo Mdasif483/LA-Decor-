@@ -97,8 +97,8 @@ function Navbar() {
 
       {/* Mobile Side Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 flex flex-col ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-70 flex flex-col ${
+          isOpen ? "translate-x-0 " : "translate-x-full"
         }`}
       >
         {/* Header with title and close button */}
@@ -113,34 +113,34 @@ function Navbar() {
         </div>
 
         {/* Menu links */}
-        <ul className="flex flex-col items-start px-6 py-6 space-y-6 text-gray-700 font-medium flex-grow">
+        <ul className="flex flex-col items-start px-6 py-6 space-y-6  text-gray-700 font-medium flex-grow">
           <li>
-            <Link to="/" onClick={() => setIsOpen(false)}>
+            <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
+            <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               About
             </Link>
           </li>
           <li>
-            <Link to="/services" onClick={() => setIsOpen(false)}>
+            <Link to="/services" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               Services
             </Link>
           </li>
           <li>
-            <Link to="/certificate" onClick={() => setIsOpen(false)}>
+            <Link to="/certificate" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               Certificate
             </Link>
           </li>
           <li>
-            <Link to="/gallery" onClick={() => setIsOpen(false)}>
+            <Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               Gallery
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
               Contact
             </Link>
           </li>
@@ -158,7 +158,7 @@ function Navbar() {
             <FaTwitter className="hover:text-blue-500 transition" />
           </a>
           <a href="mailto:example@email.com">
-            <FaEnvelope className="hover:text-green-500 transition" />
+            <FaEnvelope className="hover:text-yellow-500 transition" />
           </a>
         </div>
       </div>
