@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function AboutHero() {
   const handleScroll = () => {
-    const section = document.getElementById("contact");
+    const section = document.getElementById("about");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
