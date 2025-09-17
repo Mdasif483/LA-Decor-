@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ServicesHero from "./SubComponent/ServicesHero";
+import { div } from "framer-motion/client";
 
 function Services() {
   const services = [
@@ -37,7 +39,9 @@ function Services() {
   ];
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white mt-27 py-14 px-6 md:px-12 lg:px-20">
+    <div>
+      <ServicesHero/>
+    <div className="bg-gray-50 dark:bg-gray-900 dark:text-white mt-2 py-34 px-6 md:px-12 lg:px-20" id="services">
       {/* Section Title */}
       <div className="text-center mb-12">
         <motion.h1
@@ -80,6 +84,7 @@ function Services() {
           </Link>
         ))}
       </div>
+    </div>
     </div>
   );
 }

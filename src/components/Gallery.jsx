@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import GalleryHero from "./SubComponent/GalleryHero";
 
 const images = [
   "/images/freepik__the-style-is-candid-image-photography-with-natural__24666.png",
@@ -18,8 +19,10 @@ const images = [
 
 function Gallery() {
   return (
-    <div className="bg-gray-50 py-20 mt-27">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <div>
+    <div className="bg-gray-50 py-20 mt-6">
+      <GalleryHero/>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center " id="gallery">
         {/* Heading */}
         <motion.h2
           className="text-4xl font-bold text-gray-900 sm:text-5xl"
@@ -65,6 +68,7 @@ function Gallery() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }

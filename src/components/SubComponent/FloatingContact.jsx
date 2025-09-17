@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function FloatingContact() {
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <div className="fixed bottom-13 right-6 flex flex-col gap-4 z-50">
       {/* Call Button */}
       <a
         href="+917906696289" // yaha apna number daalo

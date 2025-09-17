@@ -49,7 +49,7 @@ function Home() {
       <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mt-2">
         <img
           alt=""
-          src="/images/pexels-heyho-7535033.jpg"
+          src="/images/WhatsApp Image 2025-09-15 at 13.46.06_67863f06.jpg"
           className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-30"
         />
 

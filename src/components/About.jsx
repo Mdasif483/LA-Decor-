@@ -1,15 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
+import AboutHero from "./SubComponent/AboutHero";
 
 function About() {
   return (
-    <div className="bg-gray-50 py-20 mt-27">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div className="mt-1 ">
+      <AboutHero />
+
+      <div className="max-w-7xl mx-auto pt-28 px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center m-8" id="about">
         {/* Left Side Image */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="flex justify-center"
         >
           <img
@@ -22,22 +26,38 @@ function About() {
         {/* Right Side Content */}
         <motion.div
           initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="space-y-6"
         >
-          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
+          {/* Animated Heading */}
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.8, y: -30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-gray-900 sm:text-5xl"
+          >
             About <span className="text-yellow-500">LA DECOR</span>
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          </motion.h2>
+
+          {/* Paragraph */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-600 leading-relaxed"
+          >
             At <span className="font-semibold text-gray-900">LA Decor</span>, we
-            believe that every home and office deserves a touch of elegance. With
-            over <span className="font-semibold">12 years of experience</span> in
+            believe that every home and office deserves a touch of elegance.
+            With over <span className="font-semibold">12 years of experience</span> in
             interior design, we bring creativity, precision, and passion to every
             project. From premium furniture to unique décor solutions, our team
             ensures that each space we design reflects beauty, comfort, and
             functionality.
-          </p>
+          </motion.p>
 
           {/* Highlights / Features */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
@@ -50,8 +70,9 @@ function About() {
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
                 className="p-5 rounded-xl shadow-md bg-white hover:shadow-xl transition"
               >
                 <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>

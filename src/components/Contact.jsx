@@ -1,9 +1,12 @@
 import React from 'react'
+import ContactHero from './SubComponent/ContactHero'
 
 function Contact() {
   return (
     <div >
-      <div className="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[1%] mt-27 ">
+      <ContactHero />
+        <h1 className='text-center text-xl md:text-7xl font-semibold'>Contact us</h1>
+      <div className="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[7%] mt-27 id" id='contact'>
         <div className="w-full md:w-2/5 p-4">
           <h2 className="text-xl md:text-7xl font-semibold mb-5">GET IN TOUCH!</h2>
           <form className="space-y-4">

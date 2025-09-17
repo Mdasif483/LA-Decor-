@@ -1,5 +1,6 @@
 import React from 'react'
 import { FileText } from "lucide-react";
+import CertificateHero from './SubComponent/CertificateHero';
 function Certificate() {
       const certificates = [
     {
@@ -15,7 +16,8 @@ function Certificate() {
   ];
   return (
     <div className='mt-27'>
-     <div className="bg-gray-50 py-16 px-6 lg:px-20">
+      <CertificateHero/>
+     <div className="bg-gray-50 py-30 px-6 lg:px-30 " id='certificate' >
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="text-4xl font-bold text-gray-900">Our Certificates</h2>
