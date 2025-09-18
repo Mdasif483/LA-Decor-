@@ -24,7 +24,7 @@ function Navbar() {
               className="h-18 w-18 p-1 rounded-full object-cover relative z-10"
             />
             {/* Hover background */}
-            <span className="absolute inset-0 rounded-full bg-yellow-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 z-0"></span>
+            <span className="absolute inset-0 rounded-full bg-[#DA6918] opacity-0 group-hover:opacity-30 transition-opacity duration-300 z-0"></span>
           </div>
           {/* Brand Name */}
           <span className="text-xl font-bold text-gray-800 tracking-wide">
@@ -35,32 +35,32 @@ function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
           <li>
-            <Link to="/" className="hover:text-yellow-500 transition">
+            <Link to="/" className="hover:text-[#DA6918] transition">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="hover:text-yellow-500 transition">
+            <Link to="/about" className="hover:text-[#DA6918] transition">
               About
             </Link>
           </li>
           <li>
-            <Link to="/services" className="hover:text-yellow-500 transition">
+            <Link to="/services" className="hover:text-[#DA6918] transition">
               Services
             </Link>
           </li>
           <li>
-            <Link to="/certificate" className="hover:text-yellow-500 transition">
+            <Link to="/certificate" className="hover:text-[#DA6918] transition">
               Certificate
             </Link>
           </li>
           <li>
-            <Link to="/gallery" className="hover:text-yellow-500 transition">
+            <Link to="/gallery" className="hover:text-[#DA6918] transition">
               Gallery
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="hover:text-yellow-500 transition">
+            <Link to="/contact" className="hover:text-[#DA6918] transition">
               Contact
             </Link>
           </li>
@@ -109,7 +109,7 @@ function Navbar() {
           <h2 className="text-xl font-bold text-white">LADECOR</h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="text-white text-2xl hover:text-yellow-500"
+            className="text-white text-2xl hover:text-[#DA6918]"
           >
             <FaTimes />
           </button>
@@ -118,32 +118,32 @@ function Navbar() {
         {/* Menu links */}
         <ul className="flex flex-col items-start px-6 py-6 space-y-6 text-gray-700 font-medium flex-grow overflow-y-auto">
           <li>
-            <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
+            <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
+            <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               About
             </Link>
           </li>
           <li>
-            <Link to="/services" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
+            <Link to="/services" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               Services
             </Link>
           </li>
           <li>
-            <Link to="/certificate" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
+            <Link to="/certificate" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               Certificate
             </Link>
           </li>
           <li>
-            <Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
+            <Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               Gallery
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-yellow-500">
+            <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               Contact
             </Link>
           </li>
@@ -161,7 +161,7 @@ function Navbar() {
             <FaTwitter className="hover:text-blue-500 transition" />
           </a>
           <a href="mailto:example@email.com">
-            <FaEnvelope className="hover:text-yellow-500 transition" />
+            <FaEnvelope className="hover:text-[#DA6918] transition" />
           </a>
         </div>
       </div>
