@@ -8,7 +8,7 @@ function FloatingContact() {
       {/* Call Button */}
       <a
         href="+917906696289" // yaha apna number daalo
-        className="bg-yellow-400 text-black p-4 rounded-full shadow-lg hover:scale-110 transition-transform"
+        className="bg-[#DA6918] text-black p-4 rounded-full shadow-lg hover:scale-110 transition-transform"
       >
         <FaPhoneAlt size={24} />
       </a>

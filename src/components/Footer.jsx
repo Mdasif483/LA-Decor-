@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Translator from "./Translator";
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const [visits, setVisits] = useState(0);
@@ -21,13 +22,57 @@ export default function Footer() {
     <footer className="bg-[#0F0F0F] text-white py-12">
       <div className="container mx-auto grid md:grid-cols-4 gap-8">
 
-        {/* About */}
-        <div>
-          <h3 className="text-xl font-bold mb-4">About</h3>
-          <p className="text-gray-400">
-            At La Décor, we believe every space tells a story. Our passion lies in crafting interiors that blend elegance, comfort, and functionality. From custom furniture to innovative designs, we aim to transform houses into homes filled with warmth, beauty, and timeless charm.
-          </p>
-        </div>
+       {/* About Section */}
+<div>
+  <div className="flex items-center gap-2 mb-4">
+    <h3 className="text-xl font-bold">About</h3>
+    <img
+      src="/images/IMG-20250915-WA0003[1].jpg"
+      alt="Logo"
+      className="w-14 h-14 rounded-full object-cover"
+    />
+  </div>
+
+  <p className="text-gray-400">
+    At La Décor, we believe every space tells a story. Our passion lies in
+    crafting interiors that blend elegance, comfort, and functionality. From
+    custom furniture to innovative designs, we aim to transform houses into
+    homes filled with warmth, beauty, and timeless charm.
+  </p>
+
+  {/* Social Icons */}
+  <div className="flex gap-4 mt-4">
+    <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+      <FaLinkedin size={20} />
+    </a>
+    <a href="7906696289" className="text-gray-400 hover:text-[#DA6918] transition">
+      <FaWhatsapp size={20} />
+    </a>
+    <a href="https://www.instagram.com/ladecor19/." className="text-gray-400 hover:text-[#DA6918] transition">
+      <FaInstagram size={20} />
+    </a>
+    <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+      <FaFacebookF size={20} />
+    </a>
+    <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+      <FaTwitter size={20} />
+    </a>
+  </div>
+
+  {/* Location & Email */}
+  <div className="flex flex-col gap-2 mt-4 text-gray-400">
+    <div className="flex items-center gap-2">
+      <FaMapMarkerAlt className="text-[#DA6918]" /> 
+      <span>Add. Near K.R Garden Quarsi bye pass road Dhorrah
+, Aligarh, India</span>
+    </div>
+    <div className="flex items-center gap-1">
+      <FaEnvelope className="text-[#DA6918]" />
+      <span><a href="ladecorinteriordesignstudio@gmail.com">ladecorinteriordesignstudio@gmail.com</a></span>
+    </div>
+  </div>
+</div>
+
 
         {/* Quick Links */}
         <div>
@@ -46,15 +91,15 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4">Services</h3>
           <ul className="flex flex-col gap-2 text-gray-400">
-            <li>Interior Designing</li>
-            <li>Furniture Customization</li>
-            <li>Home Décor Consultation</li>
-            <li>Living Room Makeover</li>
-            <li>Bedroom Design & Styling</li>
-            <li>Kitchen & Dining Area Design</li>
-            <li>Bathroom Renovation & Styling</li>
-            <li>Lighting & Ambience Solutions</li>
-            <li>Space Optimization & Storage Solutions</li>
+            <li>PVC Mats</li>
+            <li>Tuffan Glass</li>
+            <li>Grass UV Sheet</li>
+            <li>front Elivation</li>
+            <li>Modular Kitchen</li>
+            <li>Wallpaper Rolls</li>
+            <li>Customized Wallpaper</li>
+            <li>Molding Aluminium Fabricataion</li>
+            <li>Artificial Garden Glass Films & Vinly Blind (Vertical, Rollar, Zebra & wooden)</li>
 
           </ul>
         </div>
@@ -88,8 +133,8 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
-        &copy; {new Date().getFullYear()} 
-         LA Decor. All rights reserved.
+        &copy; {new Date().getFullYear()}
+        LA Decor. All rights reserved.
       </div>
     </footer>
   );

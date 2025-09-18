@@ -77,7 +77,7 @@ function HeroSection() {
         >
           {/* Typing Effect Heading */}
           <h1 className="text-4xl md:text-6xl font-bold">
-            <span className="text-yellow-400">{displayText}</span>
+            <span className="text-[#DA6918]">{displayText}</span>
             <span className="animate-pulse">|</span> {/* blinking cursor */}
           </h1>
 
@@ -94,7 +94,7 @@ function HeroSection() {
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.button
               whileHover={{ scale: 1.1 }}
-              className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg"
+              className="px-6 py-3 bg-[#DA6918] text-black font-semibold rounded-lg shadow-lg"
             >
               <Link to="/gallery">Explore Our Collection</Link>
             </motion.button>

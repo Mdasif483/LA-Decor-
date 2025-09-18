@@ -7,7 +7,7 @@ import {
   FaEnvelope,
   FaTimes,
 } from "react-icons/fa";
-import logo from "/images/WhatsApp Image 2025-09-15 at 13.46.04_1287a868.jpg"; // Apni image yahan
+import logo from "/images/IMG-20250915-WA0003[1].jpg"; // Apni image yahan
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,17 +15,21 @@ function Navbar() {
   return (
     <nav className="w-full bg-[#F9FAFB] shadow-md fixed top-0 z-50 mt-9">
       <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 xl:px-32 flex justify-between items-center h-[70px]">
-        {/* Logo */}
-        <div className="flex items-center">
+        {/* Logo + Text */}
+        <div className="flex items-center gap-3">
           <div className="relative group">
             <img
               src={logo}
               alt="LA Decor"
-              className="h-15 w-15 rounded-full object-cover relative z-10"
+              className="h-18 w-18 p-1 rounded-full object-cover relative z-10"
             />
             {/* Hover background */}
             <span className="absolute inset-0 rounded-full bg-yellow-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 z-0"></span>
           </div>
+          {/* Brand Name */}
+          <span className="text-xl font-bold text-gray-800 tracking-wide">
+            LADECOR
+          </span>
         </div>
 
         {/* Desktop Menu */}

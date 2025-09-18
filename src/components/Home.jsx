@@ -1,30 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-
-
-const links = [
-  // { name: "HOME", href: "/" },
-  // { name: "About", href: "/about" },
-  // { name: "Services", href: "/Services" },
-  // { name: "Certificate", href: "/Certificate" },
-  // { name: "Gallery", href: "/Gallery" },
-  // { name: "contact", href: "/contact" },
-];
 
 const stats = [
   { name: "Years of Experience", value: 12 },
   { name: "Successful Projects", value: 300 },
   { name: "Premium Services Offered", value: 40 },
-  { name: "Unlimited Design Possibilities", value: 999 }, // Unlimited ko number se bhi handle kar sakte ho
+  { name: "Unlimited Design Possibilities", value: 999 },
 ];
 
-// ✅ Custom hook for counter animation
-function useCounter(target, duration = 2000) {
+// ✅ Counter hook (starts whenever isVisible is true)
+function useCounter(target, isVisible, duration = 2000) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (!isVisible) {
+      setCount(0); // reset counter when not visible
+      return;
+    }
+
     let start = 0;
-    const increment = target / (duration / 16); // approx 60fps
+    const increment = target / (duration / 16);
 
     const timer = setInterval(() => {
       start += increment;
@@ -37,15 +32,33 @@ function useCounter(target, duration = 2000) {
     }, 16);
 
     return () => clearInterval(timer);
-  }, [target, duration]);
+  }, [target, isVisible, duration]);
 
   return count;
 }
 
 function Home() {
+  const statsRef = useRef(null);
+  const [statsVisible, setStatsVisible] = useState(false);
+
+  // IntersectionObserver triggers counter every time section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setStatsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 } // 30% visible triggers
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
-
       <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mt-2">
         <img
           alt=""
@@ -70,7 +83,7 @@ function Home() {
               Transform Your Space With Us
             </motion.h2>
             <motion.p
-              className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8"
+              className="mt-8 text-lg font-medium text-gray-300 sm:text-xl/8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
@@ -80,40 +93,11 @@ function Home() {
             </motion.p>
           </motion.div>
 
-          {/* Links */}
-          <motion.div
-            className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2 },
-              },
-            }}
-          >
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              {links.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  whileHover={{ scale: 1.1, color: "#ffe605" }}
-                  transition={{ duration: 0.4 }}
-                >
-                  {link.name} <span aria-hidden="true">&rarr;</span>
-                </motion.a>
-              ))}
-            </div>
-
-            {/* Stats with Counter Animation */}
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Stats Section */}
+          <div ref={statsRef} className="mt-16 sm:mt-20">
+            <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat, index) => {
-                const count = useCounter(stat.value, 2500); // 2.5 sec animation
+                const count = useCounter(stat.value, statsVisible, 2500);
                 return (
                   <motion.div
                     key={stat.name}
@@ -130,12 +114,11 @@ function Home() {
                 );
               })}
             </dl>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
 
 export default Home;

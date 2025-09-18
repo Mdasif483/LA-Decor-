@@ -6,25 +6,25 @@ const features = [
   {
     title: "Quality Assurance",
     desc: "We ensure top-notch materials and flawless craftsmanship in every project.",
-    icon: <ShieldCheck className="w-10 h-10 text-yellow-500" />,
+    icon: <ShieldCheck className="w-10 h-10 text-[#DA6918]" />,
     img: "/images/istockphoto-1170250587-612x612.jpg", // Quality img
   },
   {
     title: "Affordable Pricing",
     desc: "Luxury designs at prices that won’t break your budget.",
-    icon: <DollarSign className="w-10 h-10 text-yellow-500" />,
+    icon: <DollarSign className="w-10 h-10 text-[#DA6918]" />,
     img: "/images/istockphoto-1393631482-1024x1024.jpg", // Affordable img
   },
   {
     title: "Fast Delivery",
     desc: "On-time delivery of projects without compromising on quality.",
-    icon: <Truck className="w-10 h-10 text-yellow-500" />,
+    icon: <Truck className="w-10 h-10 text-[#DA6918]" />,
     img: "/images/istockphoto-547406694-1024x1024.jpg", // Delivery img
   },
   {
     title: "Modern Designs",
     desc: "Stylish, innovative and trend-setting interiors tailored for you.",
-    icon: <Sparkles className="w-10 h-10 text-yellow-500" />,
+    icon: <Sparkles className="w-10 h-10 text-[#DA6918]" />,
     img: "/images/pexels-ron-lach-7774246.jpg", // Modern img
   },
 ];
@@ -43,7 +43,7 @@ function WhyChooseUs() {
       transition={{ duration: 0.7 }}
       className="text-4xl font-bold text-center text-gray-800 mb-14"
     >
-      Why <span className="text-yellow-500">Choose Us?</span>
+      Why <span className="text-[#DA6918]">Choose Us?</span>
     </motion.h2>
 
     {/* Features Grid */}

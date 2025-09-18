@@ -6,6 +6,10 @@ import CallToAction from './SubComponent/CallToAction';
 import Home from './Home';
 import FloatingContact from './SubComponent/FloatingContact';
 import ContactPopup from './SubComponent/ContactPopup';
+import About from './About';
+import AboutPreview from './SubComponent/AboutPreview';
+import Testimonials from './SubComponent/testimonials';
+import PortfolioSection from './SubComponent/projects';
 
 function HeroPage() {
   return (
@@ -15,8 +19,11 @@ function HeroPage() {
       <FloatingContact/>
       <HeroSection />
       <Home />
+      <AboutPreview/>
       <ServicesSection />
       <WhyChooseUs />
+      <Testimonials/>
+      <PortfolioSection/>
       <CallToAction />
     </div>
   )

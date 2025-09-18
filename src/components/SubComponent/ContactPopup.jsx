@@ -21,9 +21,10 @@ function ContactPopup() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-1/2 right-1 -translate-y-1/2 z-40"
+          className="fixed top-1/2 right-1 -translate-y-1/2 z-40 mt-3"
         >
-          <div className="bg-white p-6 rounded-l-xl shadow-2xl relative w-80 border-l-4 border-yellow-400">
+          <div className="bg-white/5 backdrop-blur-md p-6 rounded-l-xl shadow-2xl relative w-80 border-l-4 border-[#DA6918]">
+
             {/* Close Button */}
             <button
               onClick={() => setShowForm(false)}
@@ -40,21 +41,26 @@ function ContactPopup() {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
+              />
+              <input
+                type="tel"
+                placeholder="Your Phone Number"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <textarea
                 placeholder="Your Message"
                 rows="4"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <button
                 type="submit"
-                className="w-full bg-yellow-400 text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition"
+                className="w-full bg-[#DA6918] text-black font-semibold py-2 rounded-lg hover:bg-[#b45212] transition"
               >
                 Send Message
               </button>
