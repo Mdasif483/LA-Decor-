@@ -37,7 +37,7 @@ function Navbar() {
           <li>
             <Link to="/" className="hover:text-[#DA6918] transition">
               Home
-            </Link>n
+            </Link>
           </li>
           <li>
             <Link to="/about" className="hover:text-[#DA6918] transition">

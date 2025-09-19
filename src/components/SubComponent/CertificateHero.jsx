@@ -20,7 +20,7 @@ function CertificateHero() {
                     className="w-full h-140 object-cover opacity-75"
                 />
                 {/* Overlay for dark effect */}
-                {/* <div className="absolute inset-0 bg-black bg-opacity-100"></div> */}
+                <div className="absolute inset-0 bg-black/30"></div>
             </div>
 
             {/* Content */}
@@ -48,7 +48,7 @@ function CertificateHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="text-lg md:text-xl mb-8 text-black"
+                    className="text-lg md:text-xl mb-8 text-white"
                 >
                     At , we are proud of our journey
                     and achievements. These certificates reflect our commitment to quality,

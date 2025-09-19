@@ -20,7 +20,7 @@ function GalleryHero() {
           className="w-full h-137 object-cover opacity-75"
         />
         {/* Overlay for dark effect */}
-        {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
@@ -40,7 +40,7 @@ function GalleryHero() {
             ease: "easeInOut",
           }}
         >
-          Inspired Spaces <span className="text-gray-800">&</span> <span className="text-yellow-500"> Designed to Inspire</span>
+          Inspired Spaces <span className="text-white">&</span> <span className="text-yellow-500"> Designed to Inspire</span>
         </motion.h1>
 
         {/* Paragraph */}
@@ -48,7 +48,7 @@ function GalleryHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="text-lg md:text-xl mb-8"
+          className="text-lg md:text-xl mb-8 text-white"
         >
           Step into our world of design inspiration. Browse through our curated projects that transform ordinary spaces into extraordinary experiences A glimpse into our passion for transforming spaces into visually stunning and functional designs
         </motion.p>

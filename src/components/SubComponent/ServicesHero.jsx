@@ -20,7 +20,7 @@ function ServicesHero() {
           className="w-full h-full object-cover opacity-75"
         />
         {/* Dark Overlay */}
-        {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
