@@ -12,7 +12,7 @@ function CallToAction() {
       style={{ backgroundImage: "url('/images/istockphoto-1148195855-612x612.jpg')" }}
     >
       {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
+      <div className="absolute inset-0 bg-black/10"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 flex flex-col lg:flex-row gap-12 items-start lg:items-stretch">
         {/* Left Side: Contact Form */}

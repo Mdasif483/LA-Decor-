@@ -53,6 +53,7 @@ function ServicesSection() {
       style={{ backgroundImage: "url('/images/pexels-royal-moving-storage-1098629817-20706509.jpg')" }}
       id="services"
     >
+      <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

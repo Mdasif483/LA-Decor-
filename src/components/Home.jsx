@@ -65,6 +65,7 @@ function Home() {
           src="/images/WhatsApp Image 2025-09-15 at 13.46.06_67863f06.jpg"
           className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-30"
         />
+        <div className="absolute inset-0 bg-black/30"></div>
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Heading */}
@@ -83,7 +84,7 @@ function Home() {
               Transform Your Space With Us
             </motion.h2>
             <motion.p
-              className="mt-8 text-lg font-medium text-gray-300 sm:text-xl/8"
+              className="mt-8 text-lg font-medium text-white sm:text-xl/8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
@@ -106,7 +107,7 @@ function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.3 }}
                   >
-                    <dt className="text-base/7 text-gray-300">{stat.name}</dt>
+                    <dt className="text-base/7 text-white">{stat.name}</dt>
                     <dd className="text-4xl font-semibold tracking-tight text-white">
                       {stat.value === 999 ? "Unlimited" : count + (stat.value >= 300 ? "+" : "")}
                     </dd>
