@@ -12,10 +12,12 @@ import Certificate from './components/Certificate'
 import ServiceDetail from "./components/ServiceDetail";
 import HeroPage from "./components/HeroPage";
 import Layout from "./Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+    <ScrollToTop/>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HeroPage />} />

@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AboutHero from "./SubComponent/AboutHero";
+import SecondAboutPrev from "./SubComponent/SecondAboutPrev";
 
 function About() {
   return (
     <div className="mt-1 ">
       <AboutHero />
-
+      
       <div className="max-w-7xl mx-auto pt-28 px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center m-8" id="about">
         {/* Left Side Image */}
         <motion.div
@@ -82,6 +83,7 @@ function About() {
           </div>
         </motion.div>
       </div>
+        <SecondAboutPrev/>
     </div>
   );
 }

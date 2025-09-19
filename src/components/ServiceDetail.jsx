@@ -1,117 +1,151 @@
-// src/components/ServiceDetail.jsx
+import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
-const serviceDetails = {
-  "premium-wallpapers": {
-    title: "Premium Wallpapers",
-    desc: "Our premium wallpaper collection is designed to add elegance, creativity, and personality to your interiors. With a wide range of textures, patterns, and colors, these wallpapers suit every style, from modern and minimalistic to bold and artistic themes. They are durable, easy to install, and customizable, making them a perfect choice for transforming your living room, bedroom, or workspace into a sophisticated environment that truly reflects your taste and lifestyle.",
-    img: [
-      "/images/image.png",
-      "/images/istockphoto-140472560-1024x1024.jpg",
-      "/images/istockphoto-452713019-1024x1024.jpg",
-      "/images/istockphoto-511859482-612x612.jpg",
-    ],
-  },
-  "pvc-wall-paneling": {
-    title: "PVC Wall Paneling",
-    desc: "PVC wall paneling is a modern and versatile solution that enhances the beauty and durability of your interiors. These panels are lightweight, water-resistant, termite-proof, and very easy to maintain, making them a smart alternative to traditional wall finishes. Available in a wide range of textures, colors, and patterns, PVC panels give your walls a stylish makeover while offering long-lasting protection. Perfect for homes, offices, and commercial spaces, they combine elegance with practicality and ensure a clean, sophisticated finish that lasts for years.",
-    img: [
-      "/images/istockphoto-1456385297-612x612.jpg",
-      "/images/istockphoto-1441823017-1024x1024.jpg",
-      "/images/istockphoto-1339036060-1024x1024.webp",
-      "/images/pexels-froet-3256016-5869279.jpg",
-    ],
-  },
-  "false-ceilings": {
-    title: "False Ceilings",
-    desc: "False ceilings are a stylish and functional way to enhance the interiors of any room. They not only add an elegant, modern touch but also help in improving acoustics, reducing heat, and concealing wiring or structural elements. Available in a variety of designs, textures, and finishes, false ceilings create a luxurious and spacious look while offering practical benefits. Ideal for living rooms, bedrooms, offices, and commercial spaces, they provide endless opportunities for creative lighting arrangements that completely transform the atmosphere of your space.",
-    img: [
-      "/images/pexels-froet-3256016-5869279.jpg",
-      "/images/pexels-heyho-7045352.jpg",
-      "/images/pexels-heyho-6636244.jpg",
-      "/images/pexels-heyho-6587830.jpg",
-    ],
-  },
-  "modular-kitchens": {
-    title: "Modular Kitchens",
-    desc: "Modular kitchens are the perfect blend of functionality, aesthetics, and smart space management. Designed with modern lifestyles in mind, they offer customized layouts, stylish cabinets, and efficient storage solutions that make cooking both enjoyable and hassle-free. With a wide variety of finishes, materials, and designs, modular kitchens can be tailored to match your home’s décor while ensuring durability and convenience. Whether small or spacious, they maximize every inch of available space, providing a clean and organized environment that enhances the overall charm of your interiors.",
-    img: [
-      "/images/istockphoto-174754765-612x612.jpg",
-      "/images/istockphoto-174763916-612x612.jpg",
-      "/images/istockphoto-174767708-612x612.jpg",
-      "/images/istockphoto-174774433-612x612.jpg",
-    ],
-  },
-  "decorative-blinds": {
-    title: "Decorative Blinds",
-    desc: "Decorative blinds are an elegant and practical solution for controlling light, enhancing privacy, and adding a stylish touch to any space. Available in a wide range of designs including roller, zebra, vertical, and wooden blinds, they complement both modern and traditional interiors. Crafted with high-quality materials, these blinds are durable, easy to maintain, and customizable to suit your home or office décor. By offering versatile light control and aesthetic appeal, decorative blinds not only elevate the beauty of your windows but also create a warm and inviting atmosphere.",
-    img: [
-      "/images/pexels-curtis-adams-1694007-3773571.jpg",
-      "/images/pexels-curtis-adams-1694007-3773576.jpg",
-      "/images/pexels-curtis-adams-1694007-18038081.jpg",
-      "/images/pexels-heyho-7614606.jpg",
-    ],
-  },
-  "artificial-garden-&-uv-sheets": {
-    title: "Artificial Garden & UV Sheets",
-    desc: "Artificial garden and UV sheets are a modern solution to bring greenery and freshness indoors or outdoors without the need for constant maintenance. Made with premium-quality materials, artificial grass and UV sheets replicate the natural look of real plants, adding charm to walls, balconies, rooftops, and interiors. They are weather-resistant, durable, and easy to clean, making them a perfect choice for both residential and commercial spaces. By combining aesthetics with practicality, these decorative elements create a vibrant, eco-friendly atmosphere while ensuring long-lasting beauty and convenience.",
-    img: [
-      "/images/istockphoto-154022404-612x612.jpg",
-      "/images/istockphoto-1386880205-1024x1024.jpg",
-      "/images/istockphoto-1265473004-612x612.jpg",
-      "/images/istockphoto-653921682-1024x1024.jpg",
-    ],
-  },
-};
-
-export default function ServiceDetail() {
+function ServiceDetail() {
   const { id } = useParams();
-  const service = serviceDetails[id];
+
+  // ✅ Slugs ko lowercase-hyphen form me rakho
+  const serviceData = {
+    "pvc-mats": {
+      title: "PVC Mats",
+      desc: "PVC Mats are durable, lightweight, and easy-to-clean flooring solutions that add comfort and safety to any space.",
+      images: [
+        "/images/pvc1.jpeg",
+        "/images/pvc2.jpeg",
+        "/images/pvc3.jpeg",
+        "/images/pvc4.jpeg",
+        "/images/pvc5.jpeg",
+        "/images/pvc6.jpeg",
+      ],
+    },
+    "ptuffan-glass": {
+      title: "Tuffan Glass",
+      desc: "Tuffan Glass is a high-strength, durable, and heat-resistant glass designed for safety and style.",
+      images: [
+        "/images/glass1.jpeg",
+        "/images/glass2.jpeg",
+        "/images/glass3.jpeg",
+        "/images/glass4.jpeg",
+        "/images/glass5.jpeg",
+        "/images/glass6.jpeg",
+      ],
+    },
+    "grass-uv-sheet": {
+      title: "Grass UV Sheet",
+      desc: "Grass UV Sheets provide a natural green look with long-lasting UV protection.",
+      images: [
+        "/images/grass1.jpeg",
+        "/images/grass2.jpeg",
+        "/images/grass3.jpeg",
+        "/images/grass1.jpeg",
+        "/images/grass2.jpeg",
+        "/images/grass3.jpeg",
+      ],
+    },
+    "front-elivation": {
+      title: "Front Elivation",
+      desc: "Front Elevation designs create a striking first impression with modern style and architectural detail.",
+      images: [
+        "/images/front1.jpeg",
+        "/images/front2.jpeg",
+        "/images/front3.jpeg",
+        "/images/front1.jpeg",
+        "/images/front2.jpeg",
+        "/images/front3.jpeg",
+      ],
+    },
+    "modular-kitchen": {
+      title: "Modular Kitchen",
+      desc: "Modular Kitchens combine smart design with modern functionality to make cooking spaces stylish and efficient.",
+      images: [
+        "/images/kitchen1.jpeg",
+        "/images/kitchen2.jpeg",
+        "/images/kitchen3.jpeg",
+        "/images/kitchen1.jpeg",
+        "/images/kitchen2.jpeg",
+        "/images/kitchen3.jpeg",
+      ],
+    },
+    "wallpaper-rolls": {
+      title: "Wallpaper Rolls",
+      desc: "Wallpaper Rolls offer a wide range of patterns, textures, and colors to transform your walls effortlessly.",
+      images: [
+        "/images/wall1.jpeg",
+        "/images/wall2.jpeg",
+        "/images/wall3.jpeg",
+        "/images/wall1.jpeg",
+        "/images/wall2.jpeg",
+        "/images/wall3.jpeg",
+      ],
+    },
+    "customized-wallpaper": {
+      title: "Customized Wallpaper",
+      desc: "Customized Wallpapers bring your walls to life with unique designs tailored to your taste.",
+      images: [
+        "/images/custom1.jpeg",
+        "/images/custom2.jpeg",
+        "/images/custom3.jpeg",
+        "/images/custom1.jpeg",
+        "/images/custom2.jpeg",
+        "/images/custom3.jpeg",
+      ],
+    },
+    "molding-aluminium-fabricataion": {
+      title: "Molding Aluminium Fabrication",
+      desc: "Durable, lightweight, and stylish aluminium fabrication solutions for interiors and exteriors.",
+      images: [
+        "/images/aluminium1.jpeg",
+        "/images/aluminium2.jpeg",
+        "/images/aluminium1.jpeg",
+        "/images/aluminium2.jpeg",
+        "/images/aluminium1.jpeg",
+        "/images/aluminium2.jpeg",
+      ],
+    },
+    "artificial-garden-glass-films-&-vinly-blind-(vertical,-rollar,-zebra-&-wooden)": {
+      title: "Artificial Garden Glass Films & Vinly Blind (Vertical, Rollar, Zebra & wooden)",
+      desc: "Create a natural green vibe indoors without the hassle of maintenance.",
+      images: [
+        "/images/blind1.jpeg",
+        "/images/blind2.jpeg",
+        "/images/blind1.jpeg",
+        "/images/blind2.jpeg",
+        "/images/blind1.jpeg",
+        "/images/blind2.jpeg",
+      ],
+    },
+  };
+
+  const service = serviceData[id];
 
   if (!service) {
-    return <h2 className="text-center p-10 text-red-500">Service not found</h2>;
+    return <p className="text-center mt-20 text-gray-600">Service not found</p>;
   }
 
   return (
-    <div className="p-6 md:p-10 max-w-6xl mx-auto mt-27">
-      {/* Title & Description */}
-      <motion.div
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center"
-      >
-        <h1 className="text-3xl md:text-4xl font-bold">{service.title}</h1>
-        <p className="text-gray-700 mt-4 text-lg max-w-3xl mx-auto">
-          {service.desc}
-        </p>
-      </motion.div>
-
-      {/* Image Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-        {service.img.map((image, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="overflow-hidden rounded-xl shadow-lg"
-          >
-            <img
-              src={image}
-              alt={service.title}
-              className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-            />
-          </motion.div>
+    <div className="px-6 md:px-12 lg:px-20 py-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        {service.title}
+      </h1>
+      <p className="text-gray-700 text-lg text-center mb-10 max-w-3xl mx-auto">
+        {service.desc}
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+        {service.images.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`${service.title} ${idx + 1}`}
+            className="w-full h-60 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+          />
         ))}
       </div>
-
-      {/* Back Button */}
-      <div className="text-center mt-10">
+      <div className="flex justify-center">
         <Link
           to="/services"
-          className="inline-block bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition"
+          className="bg-black text-white px-6 py-2 rounded-lg font-normal text-sm
+                     shadow-md transition-all duration-300 
+                     hover:bg-[#DA6918] hover:scale-105 hover:shadow-lg"
         >
           ← Back to Services
         </Link>
@@ -119,3 +153,5 @@ export default function ServiceDetail() {
     </div>
   );
 }
+
+export default ServiceDetail;
