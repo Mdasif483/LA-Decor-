@@ -22,56 +22,56 @@ export default function Footer() {
     <footer className="bg-[#0F0F0F] text-white py-12">
       <div className="container mx-auto grid md:grid-cols-4 gap-8">
 
-       {/* About Section */}
-<div>
-  <div className="flex items-center gap-2 mb-4">
-    <h3 className="text-xl font-bold">About</h3>
-    <img
-      src="/images/IMG-20250915-WA0003[1].jpg"
-      alt="Logo"
-      className="w-14 h-14 rounded-full object-cover"
-    />
-  </div>
+        {/* About Section */}
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-xl font-bold">About</h3>
+            <img
+              src="/images/IMG-20250915-WA0003[1].jpg"
+              alt="Logo"
+              className="w-14 h-14 rounded-full object-cover"
+            />
+          </div>
 
-  <p className="text-gray-400">
-    At La Décor, we believe every space tells a story. Our passion lies in
-    crafting interiors that blend elegance, comfort, and functionality. From
-    custom furniture to innovative designs, we aim to transform houses into
-    homes filled with warmth, beauty, and timeless charm.
-  </p>
+          <p className="text-gray-400">
+            At La Décor, we believe every space tells a story. Our passion lies in
+            crafting interiors that blend elegance, comfort, and functionality. From
+            custom furniture to innovative designs, we aim to transform houses into
+            homes filled with warmth, beauty, and timeless charm.
+          </p>
 
-  {/* Social Icons */}
-  <div className="flex gap-4 mt-4">
-    <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
-      <FaLinkedin size={20} />
-    </a>
-    <a href="7906696289" className="text-gray-400 hover:text-[#DA6918] transition">
-      <FaWhatsapp size={20} />
-    </a>
-    <a href="https://www.instagram.com/ladecor19/." className="text-gray-400 hover:text-[#DA6918] transition">
-      <FaInstagram size={20} />
-    </a>
-    <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
-      <FaFacebookF size={20} />
-    </a>
-    <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
-      <FaTwitter size={20} />
-    </a>
-  </div>
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-4">
+            <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaLinkedin size={20} />
+            </a>
+            <a href="7906696289" className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaWhatsapp size={20} />
+            </a>
+            <a href="https://www.instagram.com/ladecor19/." className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaInstagram size={20} />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaFacebookF size={20} />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaTwitter size={20} />
+            </a>
+          </div>
 
-  {/* Location & Email */}
-  <div className="flex flex-col gap-2 mt-4 text-gray-400">
-    <div className="flex items-center gap-2">
-      <FaMapMarkerAlt className="text-[#DA6918]" /> 
-      <span>Add. Near K.R Garden Quarsi bye pass road Dhorrah
-, Aligarh, India</span>
-    </div>
-    <div className="flex items-center gap-1">
-      <FaEnvelope className="text-[#DA6918]" />
-      <span><a href="ladecorinteriordesignstudio@gmail.com">ladecorinteriordesignstudio@gmail.com</a></span>
-    </div>
-  </div>
-</div>
+          {/* Location & Email */}
+          <div className="flex flex-col gap-2 mt-4 text-gray-400">
+            <div className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-[#DA6918]" />
+              <span>Add. Near K.R Garden Quarsi bye pass road Dhorrah
+                , Aligarh, India</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <FaEnvelope className="text-[#DA6918]" />
+              <span><a href="ladecorinteriordesignstudio@gmail.com">ladecorinteriordesignstudio@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
 
 
         {/* Quick Links */}
@@ -118,16 +118,27 @@ export default function Footer() {
             🔁 Total Page Visits: <span className="font-semibold">{visits}</span>
           </p>
 
-          {/* Translator Button */}
-          <div className="mt-6">
-            <button
-              onClick={() => setShowTranslator(!showTranslator)}
-              className="bg-[#000205] hover:bg-[#000e22] text-white px-4 py-2 rounded-lg"
-            >
-              🌍 Translate Website
-            </button>
-            {showTranslator && <Translator />}
-          </div>
+      {/* Translator & Webmail Buttons */}
+<div className="mt-6 flex flex-col gap-4 items-start"> {/* items-start keeps them aligned left */}
+  {/* Translator Button */}
+  <button
+    onClick={() => setShowTranslator(!showTranslator)}
+    className="bg-[#000205] hover:bg-[#000e22] text-white px-6 py-2 rounded-lg min-w-[200px]"
+  >
+    🌍 Translate Website
+  </button>
+  {showTranslator && <Translator />}
+
+  {/* Webmail Button */}
+  <a
+    href="https://md-in-82.webhostbox.net:2096/cpsess3927650103/3rdparty/roundcube/?_task=mail&_mbox=INBOX"
+    className="bg-[#DA6918] hover:bg-[#ff7f3d] text-white px-6 py-2 rounded-lg text-center font-medium transition transform hover:scale-105 duration-300 min-w-[200px]"
+  >
+    ✉️ Webmail
+  </a>
+</div>
+
+
         </div>
 
       </div>
