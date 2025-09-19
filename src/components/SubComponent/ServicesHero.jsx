@@ -40,7 +40,7 @@ function ServicesHero() {
             ease: "easeInOut",
           }}
         >
-          Our <span className="text-yellow-500">Services</span>
+          Our <span className="text-[#DA6918]">Services</span>
         </motion.h1>
 
         {/* Paragraph */}
@@ -64,11 +64,11 @@ function ServicesHero() {
         >
           <button
             onClick={handleScroll}
-            className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition"
+            className="px-6 py-3 bg-[#DA6918] text-black font-semibold rounded-lg hover:bg-[#DA6918] transition"
           >
             Explore Services
           </button>
-          <button className="px-6 py-3 bg-transparent border-2 border-yellow-500 text-yellow-500 font-semibold rounded-lg hover:bg-yellow-500 hover:text-black transition">
+          <button className="px-6 py-3 bg-transparent border-2 border-[#DA6918] text-[#DA6918] font-semibold rounded-lg hover:bg-[#DA6918] hover:text-black transition">
             <Link to="/gallery">Show Gallery</Link>
           </button>
         </motion.div>

@@ -39,7 +39,7 @@ function About() {
             viewport={{ once: true }}
             className="text-4xl font-bold text-gray-900 sm:text-5xl"
           >
-            About <span className="text-yellow-500">LA DECOR</span>
+            About <span className="text-[#DA6918]">LA DECOR</span>
           </motion.h2>
 
           {/* Paragraph */}

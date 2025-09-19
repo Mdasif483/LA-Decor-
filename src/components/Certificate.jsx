@@ -36,7 +36,7 @@ function Certificate() {
             className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow p-6 flex flex-col"
           >
             <div className="flex items-center gap-3 mb-4">
-              <FileText className="w-8 h-8 text-yellow-600" />
+              <FileText className="w-8 h-8 text-[#DA6918]" />
               <h3 className="text-xl font-semibold text-gray-800">{cert.title}</h3>
             </div>
             <p className="text-gray-600 mb-4">{cert.description}</p>
@@ -54,7 +54,7 @@ function Certificate() {
             <a
               href={cert.file}
               download
-              className="mt-4 inline-block px-5 py-2 bg-yellow-600 text-white font-medium rounded-lg shadow hover:bg-yellow-700 transition"
+              className="mt-4 inline-block px-5 py-2 bg-[#DA6918] text-white font-medium rounded-lg shadow hover:bg-yellow-700 transition"
             >
               Download PDF
             </a>

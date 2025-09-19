@@ -21,7 +21,7 @@ function Contact() {
             <div>
               <textarea id="message" name="message" placeholder='Message' className="mt-1 p-4 w-full border rounded-md" rows="4"></textarea>
             </div>
-            <button type="submit" className="px-8 py-4 bg-black text-white hover:bg-yellow-500">Submit</button>
+            <button type="submit" className="px-8 py-4 bg-black text-white hover:bg-[#DA6918]">Submit</button>
           </form>
         </div>
         <div className="w-full md:w-1/2 p-4 flex justify-center">
