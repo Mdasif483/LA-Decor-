@@ -19,8 +19,8 @@ function HeroPage() {
       <HeroSection />
       <Home />
       <SecondAboutPrev/>
-      <ServicesSection />
       <WhyChooseUs />
+      <ServicesSection />
       <Testimonials/>
       <PortfolioSection/>
       <CallToAction />
