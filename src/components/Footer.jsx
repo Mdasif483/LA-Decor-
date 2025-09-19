@@ -91,15 +91,15 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4">Services</h3>
           <ul className="flex flex-col gap-2 text-gray-400">
-            <li>PVC Mats</li>
-            <li>Tuffan Glass</li>
-            <li>Grass UV Sheet</li>
-            <li>front Elivation</li>
-            <li>Modular Kitchen</li>
-            <li>Wallpaper Rolls</li>
-            <li>Customized Wallpaper</li>
-            <li>Molding Aluminium Fabricataion</li>
-            <li>Artificial Garden Glass Films & Vinly Blind (Vertical, Rollar, Zebra & wooden)</li>
+            <li><a href="http://localhost:5173/services/pvc-mats">PVC Mats</a></li>
+            <li><a href="http://localhost:5173/services/ptuffan-glass">Tuffan Glass</a></li>
+            <li><a href="http://localhost:5173/services/grass-uv-sheet">Grass UV Sheet</a></li>
+            <li><a href="http://localhost:5173/services/front-elivation">front Elivation</a></li>
+            <li><a href="http://localhost:5173/services/modular-kitchen">Modular Kitchen</a></li>
+            <li><a href="http://localhost:5173/services/wallpaper-rolls">Wallpaper Rolls</a></li>
+            <li><a href="http://localhost:5173/services/customized-wallpaper">Customized Wallpaper</a></li>
+            <li><a href="http://localhost:5173/services/molding-aluminium-fabricataion">Molding Aluminium Fabricataion</a></li>
+            <li><a href="http://localhost:5173/services/artificial-garden-glass-films-&-vinly-blind-(vertical,-rollar,-zebra-&-wooden)">Artificial Garden Glass Films & Vinly Blind (Vertical, Rollar, Zebra & wooden)</a></li>
 
           </ul>
         </div>
