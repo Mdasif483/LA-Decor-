@@ -1,10 +1,12 @@
 import React from 'react'
 import ContactHero from './SubComponent/ContactHero'
+import CallToAction from './SubComponent/CallToAction'
 
 function Contact() {
   return (
     <div >
       <ContactHero />
+      <CallToAction />
         {/* <h1 className='text-center text-xl md:text-7xl font-semibold'>Contact us</h1> */}
       <div className="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[7%] mt-27 " id='contact'>
         <div className="w-full md:w-2/5 p-4 ">

@@ -122,7 +122,7 @@ function CallToAction() {
       </div>
 
       {/* Learn More Button */}
-      <div className="mt-12 text-center">
+      {/* <div className="mt-12 text-center">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -130,7 +130,7 @@ function CallToAction() {
         >
           <Link to="/contact">Learn More</Link>
         </motion.button>
-      </div>
+      </div> */}
     </section>
   );
 }
