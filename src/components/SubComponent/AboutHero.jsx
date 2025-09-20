@@ -15,12 +15,12 @@ function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/about-bg.jpg" // apni image ka path yaha do
+          src="/images/pexels-ron-lach-7774246.jpg" // apni image ka path yaha do
           alt="About Background"
           className="w-full h-full object-cover"
         />
         {/* Overlay for dark effect */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
