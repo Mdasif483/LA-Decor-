@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaPhone,
@@ -13,9 +14,26 @@ import {
 } from "react-icons/fa";
 
 function CallToAction() {
+  // Animation variants
+  const leftVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
+  const rightVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.3 } },
+  };
+
+  const iconHover = {
+    scale: 1.2,
+    color: "#DA6918",
+    transition: { duration: 0.3 },
+  };
+
   return (
     <section
-      className="relative bg-center bg-cover py-12 sm:py-16 md:py-24 lg:py-32 overflow-x-hidden" // ✅ fix horizontal scroll
+      className="relative bg-center bg-cover py-12 sm:py-16 md:py-24 lg:py-32 overflow-x-hidden"
       style={{
         backgroundImage: "url('/images/istockphoto-1148195855-612x612.jpg')",
       }}
@@ -27,7 +45,13 @@ function CallToAction() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           {/* Left Side: Contact Form */}
-          <div className="w-full lg:w-1/2 bg-white/95 rounded-2xl p-6 sm:p-8 shadow-xl">
+          <motion.div
+            className="w-full lg:w-1/2 bg-white/95 rounded-2xl p-6 sm:p-8 shadow-xl"
+            variants={leftVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center lg:text-left">
               Get in Touch
             </h2>
@@ -54,10 +78,16 @@ function CallToAction() {
                 Contact Us
               </button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Right Side: Contact Details */}
-          <div className="w-full lg:w-1/2 text-white flex flex-col gap-5">
+          <motion.div
+            className="w-full lg:w-1/2 text-white flex flex-col gap-5"
+            variants={rightVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center lg:text-left">
               Contact Details
             </h2>
@@ -96,44 +126,20 @@ function CallToAction() {
 
             {/* Social Icons */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-5 mt-6 text-xl">
-              <a
-                href="https://www.facebook.com/"
-                className="hover:text-[#DA6918] transition"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://www.instagram.com/ladecor19/"
-                className="hover:text-[#DA6918] transition"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://www.twitter.com/"
-                className="hover:text-[#DA6918] transition"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="https://www.youtube.com/"
-                className="hover:text-[#DA6918] transition"
-              >
-                <FaYoutube />
-              </a>
-              <a
-                href="https://www.linkedin.com/"
-                className="hover:text-[#DA6918] transition"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://wa.me/7906696289"
-                className="hover:text-[#DA6918] transition"
-              >
-                <FaWhatsapp />
-              </a>
+              {[FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaWhatsapp].map(
+                (Icon, idx) => (
+                  <motion.a
+                    key={idx}
+                    href="#"
+                    whileHover={iconHover}
+                    className="transition"
+                  >
+                    <Icon />
+                  </motion.a>
+                )
+              )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
