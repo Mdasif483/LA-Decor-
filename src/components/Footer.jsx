@@ -75,7 +75,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-1">
               <FaEnvelope className="text-[#DA6918]" />
-              <span><a href="ladecorinteriordesignstudio@gmail.com">ladecorinteriordesignstudio@gmail.com</a></span>
+              <span><a href="http://www.ladecorinteriordesignstudio.in">www.ladecorinteriordesignstudio.in</a></span>
             </div>
           </div>
         </div>
@@ -119,32 +119,42 @@ export default function Footer() {
             Shop No 1 & 2 Upper Ground Floor  Nr Kr Garden Bypass Road Opposite Owais Karni Masjid Dhorra Aligarh Uttar Pradesh 202001,India
           </p>
           <p className="text-gray-400 mt-2">Phone:+91 7906696289 , 9084549327</p>
-          <p className="text-gray-400"><Link to="Info@ladecorinteriordesignstudio.in">Email: ladecorinteriordesignstudio@gmail.com</Link> </p>
+          <p className="text-gray-400">
+            <a href="mailto:www.ladecorinteriordesignstudio@gmail.com" className="hover:underline">
+              WebEmail: ladecorinteriordesignstudio@gmail.com
+            </a>
+          </p>
+          <p className="text-gray-400">
+            <a href="mailto:Info@ladecorinteriordesignstudio.in" className="hover:underline">
+              Info-Email: Info@ladecorinteriordesignstudio.in
+            </a>
+          </p>
+
 
           {/* Visit Counter (per page load) */}
           <p className="text-gray-400 mt-4 text-sm">
             🔁 Total Page Visits: <span className="font-semibold">{visits}</span>
           </p>
 
-      {/* Translator & Webmail Buttons */}
-<div className="mt-6 flex flex-col gap-4 items-start"> {/* items-start keeps them aligned left */}
-  {/* Translator Button */}
-  <button
-    onClick={() => setShowTranslator(!showTranslator)}
-    className="bg-[#000205] hover:bg-[#000e22] text-white px-6 py-2 rounded-lg min-w-[200px]"
-  >
-    🌍 Translate Website
-  </button>
-  {showTranslator && <Translator />}
+          {/* Translator & Webmail Buttons */}
+          <div className="mt-6 flex flex-col gap-4 items-start"> {/* items-start keeps them aligned left */}
+            {/* Translator Button */}
+            <button
+              onClick={() => setShowTranslator(!showTranslator)}
+              className="bg-[#000205] hover:bg-[#000e22] text-white px-6 py-2 rounded-lg min-w-[200px]"
+            >
+              🌍 Translate Website
+            </button>
+            {showTranslator && <Translator />}
 
-  {/* Webmail Button */}
-  <a
-    href="https://md-in-82.webhostbox.net:2096/cpsess3927650103/3rdparty/roundcube/?_task=mail&_mbox=INBOX"
-    className="bg-[#DA6918] hover:bg-[#ff7f3d] text-white px-6 py-2 rounded-lg text-center font-medium transition transform hover:scale-105 duration-300 min-w-[200px]"
-  >
-    ✉️ Webmail
-  </a>
-</div>
+            {/* Webmail Button */}
+            <Link
+              to="https://md-in-82.webhostbox.net:2096/cpsess3927650103/3rdparty/roundcube/?_task=mail&_mbox=INBOX"
+              className="bg-[#DA6918] hover:bg-[#ff7f3d] text-white px-6 py-2 rounded-lg text-center font-medium transition transform hover:scale-105 duration-300 min-w-[200px]"
+            >
+              ✉️ Webmail
+            </Link>
+          </div>
 
 
         </div>

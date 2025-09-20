@@ -21,7 +21,7 @@ function ContactPopup() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-1/2 right-1 -translate-y-1/2 z-40 mt-3"
+          className="fixed top-1/2 right-2 -translate-y-1/2 z-40 mt-3"
         >
           <div className="bg-white/5 backdrop-blur-md p-4 rounded-l-lg shadow-xl relative w-64 border-l-4 border-[#DA6918]">
             {/* Close Button */}
