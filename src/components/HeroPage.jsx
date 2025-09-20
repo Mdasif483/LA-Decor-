@@ -9,6 +9,7 @@ import ContactPopup from './SubComponent/ContactPopup';
 import Testimonials from './SubComponent/testimonials';
 import PortfolioSection from './SubComponent/projects';
 import SecondAboutPrev from './SubComponent/SecondAboutPrev';
+import TeamSection from './SubComponent/TeamSection';
 
 function HeroPage() {
   return (
@@ -17,12 +18,13 @@ function HeroPage() {
       <ContactPopup/>
       <FloatingContact/>
       <HeroSection />
-      <Home />
       <SecondAboutPrev/>
+      <Home />
       <WhyChooseUs />
       <ServicesSection />
       <Testimonials/>
       <PortfolioSection/>
+      <TeamSection/>
       <CallToAction />
     </div>
   )

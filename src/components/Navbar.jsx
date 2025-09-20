@@ -8,15 +8,17 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import logo from "/images/IMG-20250915-WA0003[1].jpg"; // Apni image yahan
+import { FaLinkedin, FaYoutube } from "react-icons/fa6";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-[#F9FAFB] shadow-md fixed top-0 z-50 mt-9">
-      <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 xl:px-32 flex justify-between items-center h-[70px]">
-        {/* Logo + Text */}
+    <nav className="w-full bg-[#F9FAFB] shadow-md fixed top-0 z-50 mt-15">
+      <div className="w-full px-6 md:px-12 flex justify-between items-center h-[70px]">
+        {/* Logo + Text (always left aligned) */}
         <div className="flex items-center gap-3">
+          {/* Logo */}
           <div className="relative group">
             <img
               src={logo}
@@ -26,13 +28,19 @@ function Navbar() {
             {/* Hover background */}
             <span className="absolute inset-0 rounded-full bg-[#DA6918] opacity-0 group-hover:opacity-30 transition-opacity duration-300 z-0"></span>
           </div>
-          {/* Brand Name */}
-          <span className="text-xl font-bold text-gray-800 tracking-wide">
-            LADECOR
-          </span>
+
+          {/* Brand Name + Tagline */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+            <span className="text-xl font-bold text-gray-800 tracking-wide">
+              LA DECOR
+            </span>
+            <span className="text-sm text-gray-600">
+              Interior Design Studio
+            </span>
+          </div>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu (always on right side) */}
         <ul className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
           <li>
             <Link to="/" className="hover:text-[#DA6918] transition">
@@ -57,6 +65,11 @@ function Navbar() {
           <li>
             <Link to="/gallery" className="hover:text-[#DA6918] transition">
               Gallery
+            </Link>
+          </li>
+          <li>
+            <Link to="/video" className="hover:text-[#DA6918] transition">
+              Video
             </Link>
           </li>
           <li>
@@ -101,12 +114,13 @@ function Navbar() {
 
       {/* Mobile Side Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-70 flex flex-col ${isOpen ? "translate-x-0 " : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-70 flex flex-col ${
+          isOpen ? "translate-x-0 " : "translate-x-full"
+        }`}
       >
         {/* Header with title and close button */}
         <div className="flex justify-between items-center px-6 py-4 border-b bg-[#0F0F0F]">
-          <h2 className="text-xl font-bold text-white">LADECOR</h2>
+          <h2 className="text-xl font-bold text-white">LA DECOR</h2>
           <button
             onClick={() => setIsOpen(false)}
             className="text-white text-2xl hover:text-[#DA6918]"
@@ -143,6 +157,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/video" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
+              Video
+            </Link>
+          </li>
+          <li>
             <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-[#DA6918]">
               Contact
             </Link>
@@ -163,9 +182,14 @@ function Navbar() {
           <a href="mailto:example@email.com">
             <FaEnvelope className="hover:text-[#DA6918] transition" />
           </a>
+          <a href="https://www.linkedin.com/">
+            <FaLinkedin className="hover:text-[#DA6918] transition" />
+          </a>
+          <a href="https://youtube.com">
+            <FaYoutube className="hover:text-[#DA6918] transition" />
+          </a>
         </div>
       </div>
-
     </nav>
   );
 }

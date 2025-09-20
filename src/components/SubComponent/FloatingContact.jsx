@@ -15,7 +15,7 @@ function FloatingContact() {
 
       {/* WhatsApp Button */}
       <a
-        href="+917906696289" // yaha apna whatsapp number daalo
+        href="https://wa.me/7906696289" // yaha apna whatsapp number daalo
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform"

@@ -18,7 +18,7 @@ function ServiceDetail() {
         "/images/cef68226-0645-4f31-9963-2f9bb71e6170.jpeg",
       ],
     },
-    "ptuffan-glass": {
+    "tuffan-glass": {
       title: "Tuffan Glass",
       desc: "Bring elegance and strength to your interiors with Tuffan Glass! Known for its durability and crystal-clear finish, Tuffan Glass adds a modern touch to windows, partitions, and decorative installations. Scratch-resistant, easy to maintain, and stylishly versatile, it’s the perfect choice for homes, offices, and commercial spaces.",
       images: [

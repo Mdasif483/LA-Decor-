@@ -23,46 +23,45 @@ function ContactPopup() {
           transition={{ duration: 0.5 }}
           className="fixed top-1/2 right-1 -translate-y-1/2 z-40 mt-3"
         >
-          <div className="bg-white/5 backdrop-blur-md p-6 rounded-l-xl shadow-2xl relative w-80 border-l-4 border-[#DA6918]">
-
+          <div className="bg-white/5 backdrop-blur-md p-4 rounded-l-lg shadow-xl relative w-64 border-l-4 border-[#DA6918]">
             {/* Close Button */}
             <button
               onClick={() => setShowForm(false)}
-              className="absolute top-3 right-3 text-gray-600 hover:text-black"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black"
             >
-              <X size={20} />
+              <X size={18} />
             </button>
 
             {/* Contact Form */}
-            <h2 className="text-xl font-semibold mb-4 text-center text-gray-800">
+            <h2 className="text-lg font-semibold mb-3 text-center text-gray-800">
               Contact Us
             </h2>
-            <form className="space-y-4">
+            <form className="space-y-3 text-sm">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
+                className="w-full px-3 py-1.5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
+                className="w-full px-3 py-1.5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <input
                 type="tel"
                 placeholder="Your Phone Number"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
+                className="w-full px-3 py-1.5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <textarea
                 placeholder="Your Message"
-                rows="4"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
+                rows="3"
+                className="w-full px-3 py-1.5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#DA6918]"
               />
               <button
                 type="submit"
-                className="w-full bg-[#DA6918] text-black font-semibold py-2 rounded-lg hover:bg-[#b45212] transition"
+                className="w-full bg-[#DA6918] text-black font-medium py-1.5 rounded-md hover:bg-[#b45212] transition"
               >
-                Send Message
+                Send
               </button>
             </form>
           </div>

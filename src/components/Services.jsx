@@ -12,7 +12,7 @@ function Services() {
       img: "/images/PVC bath mats-anti slip.jpeg",
     },
     {
-      title: "PTuffan Glass",
+      title: "Tuffan Glass",
       desc: "Tuffan Glass is a high-strength, durable, and heat-resistant glass designed for safety and style..",
       img: "/images/cc1fc5b6-2442-4ca8-8a62-c9f191f52b34.jpeg",
     },

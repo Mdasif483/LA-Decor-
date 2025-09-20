@@ -10,6 +10,8 @@ import {
   FaWhatsapp,
   FaHome,
   FaMapMarkerAlt,
+  FaLinkedin,
+  FaPrint,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -77,7 +79,8 @@ function CallToAction() {
 
           <div className="flex items-start gap-3">
             <FaEnvelope className="text-[#DA6918] mt-1" />
-            <span className="break-words">ladecorinteriordesignstudio@gmail.com</span>
+            
+            <Link to="ladecorinteriordesignstudio@gmail.com"><span className="break-words">ladecorinteriordesignstudio@gmail.com</span></Link>
           </div>
 
           <div className="flex items-center gap-3">
@@ -99,7 +102,7 @@ function CallToAction() {
 
           {/* Social Icons */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 mt-6 text-lg">
-            <a href="#" className="hover:text-[#DA6918] transition">
+            <a href="https://www.facebook.com/" className="hover:text-[#DA6918] transition">
               <FaFacebookF />
             </a>
             <a
@@ -108,13 +111,17 @@ function CallToAction() {
             >
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-[#DA6918] transition">
+            <a href="https://www.twitter.com/" className="hover:text-[#DA6918] transition">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:text-[#DA6918] transition">
+            <a href="https://www.youtube.com/" className="hover:text-[#DA6918] transition">
               <FaYoutube />
             </a>
-            <a href="tel:7906696289" className="hover:text-[#DA6918] transition">
+            <a href="https://www.linkedin.com/" className="hover:text-[#DA6918] transition">
+              <FaLinkedin />
+            </a>
+
+            <a href="https://wa.me/7906696289" className="hover:text-[#DA6918] transition">
               <FaWhatsapp />
             </a>
           </div>

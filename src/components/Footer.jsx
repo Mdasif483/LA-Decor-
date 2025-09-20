@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Translator from "./Translator";
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPinterest, FaPrint, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   const [visits, setVisits] = useState(0);
@@ -42,20 +43,26 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-4">
-            <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+            <a href="https://www.linkedin.com/" className="text-gray-400 hover:text-[#DA6918] transition">
               <FaLinkedin size={20} />
             </a>
-            <a href="7906696289" className="text-gray-400 hover:text-[#DA6918] transition">
+            <a href="https://wa.me/7906696289" className="text-gray-400 hover:text-[#DA6918] transition">
               <FaWhatsapp size={20} />
             </a>
             <a href="https://www.instagram.com/ladecor19/." className="text-gray-400 hover:text-[#DA6918] transition">
               <FaInstagram size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+            <a href="https://www.Facebook.com/" className="text-gray-400 hover:text-[#DA6918] transition">
               <FaFacebookF size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-[#DA6918] transition">
+            <a href="https://www.twitter.com/" className="text-gray-400 hover:text-[#DA6918] transition">
               <FaTwitter size={20} />
+            </a>
+            <a href="https://www.youtube.com/" className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaYoutube size={20} />
+            </a>
+            <a href="https://www.Pinterest.com/" className="text-gray-400 hover:text-[#DA6918] transition">
+              <FaPinterest size={20} />
             </a>
           </div>
 
@@ -81,8 +88,9 @@ export default function Footer() {
             <li><Link to="/" className="hover:text-indigo-400">Home</Link></li>
             <li><Link to="/about" className="hover:text-indigo-400">About</Link></li>
             <li><Link to="/services" className="hover:text-indigo-400">Services</Link></li>
-            <li><Link to="/gallery" className="hover:text-indigo-400">Gallery</Link></li>
             <li><Link to="/certificate" className="hover:text-indigo-400">Certificates</Link></li>
+            <li><Link to="/gallery" className="hover:text-indigo-400">Gallery</Link></li>
+            <li><Link to="/video" className="hover:text-indigo-400">Video</Link></li>
             <li><Link to="/contact" className="hover:text-indigo-400">Contact</Link></li>
           </ul>
         </div>
@@ -111,7 +119,7 @@ export default function Footer() {
             Shop No 1 & 2 Upper Ground Floor  Nr Kr Garden Bypass Road Opposite Owais Karni Masjid Dhorra Aligarh Uttar Pradesh 202001,India
           </p>
           <p className="text-gray-400 mt-2">Phone:+91 7906696289 , 9084549327</p>
-          <p className="text-gray-400">Email: ladecorinteriordesignstudio@gmail.com </p>
+          <p className="text-gray-400"><Link to="Info@ladecorinteriordesignstudio.in">Email: ladecorinteriordesignstudio@gmail.com</Link> </p>
 
           {/* Visit Counter (per page load) */}
           <p className="text-gray-400 mt-4 text-sm">

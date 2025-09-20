@@ -13,6 +13,8 @@ import ServiceDetail from "./components/ServiceDetail";
 import HeroPage from "./components/HeroPage";
 import Layout from "./Layout";
 import ScrollToTop from "./components/ScrollToTop";
+import Video from "./components/Video";
+// import Video from "./components/Video";
 
 function App() {
   return (
@@ -25,8 +27,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/certificate" element={<Certificate />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/video" element={<Video />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </>
