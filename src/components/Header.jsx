@@ -16,7 +16,7 @@ function Header() {
         
         {/* Center text */}
         <p className="font-medium text-center">
-          ✨ GSTNO : 09CBPPD8563B1ZH , UDYAM NO : UDYAM-UP-02-0063416 ✨
+          ✨ GST NO : 09CBPPD8563B1ZH , UDYAM NO : UDYAM-UP-02-0063416 ✨
         </p>
 
         {/* Social Icons (right side in desktop, center in mobile) */}
