@@ -78,13 +78,13 @@ export default function Footer() {
               <span><a href="http://www.ladecorinteriordesignstudio.in">www.ladecorinteriordesignstudio.in</a></span>
             </div>
             <div className="flex items-center gap-1">
-              <FaEnvelope className="text-[#DA6918]" />
-              <span><a href="https://webworldhub.co.in/">Webworldhub</a></span>
+              {/* <FaEnvelope className="text-[#DA6918]" /> */}
+              {/* <span><a href="https://webworldhub.co.in/">Webworldhub</a></span> */}
               {/* <p>Design and Developed by web world hub</p> */}
             </div>
             <div className="flex items-center gap-1">
               {/* <FaEnvelope className="text-[#DA6918]" /> */}
-              <span><a href="https://webworldhub.co.in/"></a>Design and Developed by web world hub</span>
+              {/* <span><a href="https://webworldhub.co.in/"></a>Design and Developed by web world hub</span> */}
               {/* <p>Design and Developed by web world hub</p> */}
             </div>
           </div>
@@ -95,13 +95,13 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
           <ul className="flex flex-col gap-2">
-            <li><Link to="/" className="hover:text-indigo-400">Home</Link></li>
-            <li><Link to="/about" className="hover:text-indigo-400">About</Link></li>
-            <li><Link to="/services" className="hover:text-indigo-400">Services</Link></li>
-            <li><Link to="/certificate" className="hover:text-indigo-400">Certificates</Link></li>
-            <li><Link to="/gallery" className="hover:text-indigo-400">Gallery</Link></li>
-            <li><Link to="/video" className="hover:text-indigo-400">Video</Link></li>
-            <li><Link to="/contact" className="hover:text-indigo-400">Contact</Link></li>
+            <li><Link to="/" className="hover:hover:text-[#ff7f3d]">Home</Link></li>
+            <li><Link to="/about" className="hover:text-[#ff7f3d]">About</Link></li>
+            <li><Link to="/services" className="hover:text-[#ff7f3d]">Services</Link></li>
+            <li><Link to="/certificate" className="hover:text-[#ff7f3d]">Certificates</Link></li>
+            <li><Link to="/gallery" className="hover:text-[#ff7f3d]">Gallery</Link></li>
+            <li><Link to="/video" className="hover:text-[#ff7f3d]">Video</Link></li>
+            <li><Link to="/contact" className="hover:text-[#ff7f3d]">Contact</Link></li>
           </ul>
         </div>
 
@@ -110,16 +110,16 @@ export default function Footer() {
         {/* Services */}
         <div>
           <h3 className="text-xl font-bold mb-4">Services</h3>
-          <ul className="flex flex-col gap-2 text-gray-400">
-            <li><a href="/services/pvc-mats">PVC Mats</a></li>
-            <li><a href="/services/ptuffan-glass">Tuffan Glass</a></li>
-            <li><a href="/services/grass-uv-sheet">Grass UV Sheet</a></li>
-            <li><a href="/services/front-elivation">front Elivation</a></li>
-            <li><a href="/services/modular-kitchen">Modular Kitchen</a></li>
-            <li><a href="/services/wallpaper-rolls">Wallpaper Rolls</a></li>
-            <li><a href="/services/customized-wallpaper">Customized Wallpaper</a></li>
-            <li><a href="/services/molding-aluminium-fabricataion">Molding Aluminium Fabricataion</a></li>
-            <li><a href="/services/artificial-garden-glass-films-&-vinly-blind-(vertical,-rollar,-zebra-&-wooden)">Artificial Garden Glass Films & Vinly Blind (Vertical, Rollar, Zebra & wooden)</a></li>
+          <ul className="flex flex-col gap-2 text-gray-400 ">
+            <li><a href="/services/pvc-mats" className="hover:text-[#ff7f3d]">PVC Mats</a></li>
+            <li><a href="/services/ptuffan-glass" className="hover:text-[#ff7f3d]">Tuffan Glass</a></li>
+            <li><a href="/services/grass-uv-sheet" className="hover:text-[#ff7f3d]">Grass UV Sheet</a></li>
+            <li><a href="/services/front-elivation" className="hover:text-[#ff7f3d]">front Elivation</a></li>
+            <li><a href="/services/modular-kitchen" className="hover:text-[#ff7f3d]">Modular Kitchen</a></li>
+            <li><a href="/services/wallpaper-rolls" className="hover:text-[#ff7f3d]">Wallpaper Rolls</a></li>
+            <li><a href="/services/customized-wallpaper" className="hover:text-[#ff7f3d]">Customized Wallpaper</a></li>
+            <li><a href="/services/molding-aluminium-fabricataion" className="hover:text-[#ff7f3d]">Molding Aluminium Fabricataion</a></li>
+            <li><a href="/services/artificial-garden-glass-films-&-vinly-blind-(vertical,-rollar,-zebra-&-wooden)" className="hover:text-[#ff7f3d]">Artificial Garden Glass Films & Vinly Blind (Vertical, Rollar, Zebra & wooden)</a></li>
 
           </ul>
         </div>
@@ -175,7 +175,8 @@ export default function Footer() {
 
       <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
         &copy; {new Date().getFullYear()}
-        LA Decor. All rights reserved.
+        LA Decor. All rights reserved.<br />
+        <span>Design and Developed by </span><a className="hover:text-[#ff7f3d]" href="https://webworldhub.co.in/">Web World Hub</a>
       </div>
     </footer>
   );
