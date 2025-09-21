@@ -77,6 +77,16 @@ export default function Footer() {
               <FaEnvelope className="text-[#DA6918]" />
               <span><a href="http://www.ladecorinteriordesignstudio.in">www.ladecorinteriordesignstudio.in</a></span>
             </div>
+            <div className="flex items-center gap-1">
+              <FaEnvelope className="text-[#DA6918]" />
+              <span><a href="https://webworldhub.co.in/">Webworldhub</a></span>
+              {/* <p>Design and Developed by web world hub</p> */}
+            </div>
+            <div className="flex items-center gap-1">
+              {/* <FaEnvelope className="text-[#DA6918]" /> */}
+              <span><a href="https://webworldhub.co.in/"></a>Design and Developed by web world hub</span>
+              {/* <p>Design and Developed by web world hub</p> */}
+            </div>
           </div>
         </div>
 
@@ -94,6 +104,8 @@ export default function Footer() {
             <li><Link to="/contact" className="hover:text-indigo-400">Contact</Link></li>
           </ul>
         </div>
+
+        
 
         {/* Services */}
         <div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -16,22 +16,38 @@ const services = [
 
 function ServicesSection() {
   const [startIndex, setStartIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 = left, 1 = right
-  const visibleCount = 4;
+  const [direction, setDirection] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  // 📱 Responsive visibleCount setup
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 640) setVisibleCount(1); // Mobile
+      else if (window.innerWidth < 1024) setVisibleCount(2); // Tablet
+      else setVisibleCount(4); // Desktop
+    };
+
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
 
   const handlePrev = () => {
     setDirection(-1);
-    setStartIndex((prev) => (prev - 1 < 0 ? services.length - visibleCount : prev - 1));
+    setStartIndex((prev) =>
+      prev - 1 < 0 ? services.length - visibleCount : prev - 1
+    );
   };
 
   const handleNext = () => {
     setDirection(1);
-    setStartIndex((prev) => (prev + 1 > services.length - visibleCount ? 0 : prev + 1));
+    setStartIndex((prev) =>
+      prev + 1 > services.length - visibleCount ? 0 : prev + 1
+    );
   };
 
   const visibleServices = services.slice(startIndex, startIndex + visibleCount);
 
-  // Animation variants for sliding
   const slideVariants = {
     enter: (dir) => ({
       x: dir > 0 ? 300 : -300,
@@ -50,7 +66,10 @@ function ServicesSection() {
   return (
     <section
       className="relative bg-fixed bg-center bg-cover py-20"
-      style={{ backgroundImage: "url('/images/pexels-royal-moving-storage-1098629817-20706509.jpg')" }}
+      style={{
+        backgroundImage:
+          "url('/images/pexels-royal-moving-storage-1098629817-20706509.jpg')",
+      }}
       id="services"
     >
       <div className="absolute inset-0 bg-black/70"></div>
@@ -74,18 +93,18 @@ function ServicesSection() {
           </button>
 
           {/* Carousel */}
-          <div className="flex w-full justify-center gap-8">
+          <div className="flex w-full justify-center gap-6">
             <AnimatePresence custom={direction}>
-              {visibleServices.map((service, index) => (
+              {visibleServices.map((service) => (
                 <motion.div
-                  key={service.title + startIndex} // unique key for animation
+                  key={service.title + startIndex}
                   custom={direction}
                   variants={slideVariants}
                   initial="enter"
                   animate="center"
                   exit="exit"
                   transition={{ duration: 0.5 }}
-                  className="bg-white/90 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 backdrop-blur-sm w-60 flex-shrink-0"
+                  className="bg-white/90 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 backdrop-blur-sm w-72 max-sm:w-full flex-shrink-0"
                 >
                   <img
                     src={service.img}
@@ -93,7 +112,9 @@ function ServicesSection() {
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      {service.title}
+                    </h3>
                   </div>
                 </motion.div>
               ))}
