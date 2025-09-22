@@ -126,19 +126,67 @@ function CallToAction() {
 
             {/* Social Icons */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-5 mt-6 text-xl">
-              {[FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaWhatsapp].map(
-                (Icon, idx) => (
-                  <motion.a
-                    key={idx}
-                    href="#"
-                    whileHover={iconHover}
-                    className="transition"
-                  >
-                    <Icon />
-                  </motion.a>
-                )
-              )}
+              <motion.a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={iconHover}
+                className="transition"
+              >
+                <FaFacebookF />
+              </motion.a>
+
+              <motion.a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={iconHover}
+                className="transition"
+              >
+                <FaInstagram />
+              </motion.a>
+
+              <motion.a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={iconHover}
+                className="transition"
+              >
+                <FaTwitter />
+              </motion.a>
+
+              <motion.a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={iconHover}
+                className="transition"
+              >
+                <FaYoutube />
+              </motion.a>
+
+              <motion.a
+                href="https://linkedin.com/in"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={iconHover}
+                className="transition"
+              >
+                <FaLinkedin />
+              </motion.a>
+
+              <motion.a
+                href="https://wa.me/917906696289"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={iconHover}
+                className="transition"
+              >
+                <FaWhatsapp />
+              </motion.a>
             </div>
+
           </motion.div>
         </div>
       </div>

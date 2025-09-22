@@ -174,8 +174,8 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
-        &copy; {new Date().getFullYear()}
-        LA Decor. All rights reserved.<br />
+        &copy; {new Date().getFullYear() } 
+          LA Decor. All rights reserved.<br />
         <span>Design and Developed by </span><a className="hover:text-[#ff7f3d]" href="https://webworldhub.co.in/">Web World Hub</a>
       </div>
     </footer>
